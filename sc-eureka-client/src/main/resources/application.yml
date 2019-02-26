@@ -5,9 +5,14 @@ eureka:
   instance:
     hostname: localhost
     instance-id: eureka-server-provided
+    lease-renewal-interval-in-seconds: 5             # 心跳时间，即服务续约间隔时间（缺省为30s）
+    lease-expiration-duration-in-seconds: 10      # 发呆时间，即服务续约到期时间（缺省为90s）
   client:
+    healthcheck:
+      enabled: true
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+    registry-fetch-interval-seconds: 5  #表示eureka client间隔多久去拉取服务注册信息
       
 spring:
   application:
