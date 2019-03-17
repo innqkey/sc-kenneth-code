@@ -18,7 +18,7 @@ public class EurekaFeignController {
     @Autowired
     FeignService feignService;
     
-    @GetMapping("/feign")
+    @GetMapping("/hi")
     public String sayHi(@RequestParam String name){
         return feignService.sayHiFromClientOne(name);
     }

@@ -64,5 +64,6 @@
 		<module>sc-eureka-feign</module>
 		<module>sc-eureka-hystrix</module>
 		<module>sc-eureka-hystrix-feign</module>
+		<module>sc-eureka-zuul</module>
 	</modules>
 </project>
