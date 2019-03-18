@@ -1,6 +1,7 @@
 # config server 服务中心
+# run as --> run configurations --> arguments --> -Dserver.port=XXXX（port）
 server:
-  port: 8770
+  port: 8772
   
 spring:
   application:

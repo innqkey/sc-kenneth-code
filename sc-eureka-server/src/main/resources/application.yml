@@ -1,3 +1,4 @@
+#eureka 注册中心
 server:
   port: 8761
 
@@ -10,11 +11,11 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
     
-  server:
+  #server:
     #关闭自我保护功能
-    enable-self-preservation: false
+    #enable-self-preservation: false
     #清理服务器, 即扫描失效服务的间隔时间（缺省为60*1000ms）
-    eviction-interval-timer-in-ms: 5000 
+    #eviction-interval-timer-in-ms: 5000 
       
 spring:
   application:
