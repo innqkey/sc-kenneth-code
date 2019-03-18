@@ -1,0 +1,18 @@
+server:
+  port: 8770
+  
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          username:
+          password:
+          uri: https://github.com/innqkey/springCloudConfig/
+          searchPaths: respo
+          clone-on-start: true  #程序启动即clone git仓库      label: master  
+      
+logging:  level:    org.springframework.cloud: DEBUG  #测试时用，方便观察过程
+    org.springframework.boot: DEBUG

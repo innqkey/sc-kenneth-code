@@ -1,0 +1,7 @@
+server:
+  port: 8771
+
+management:  endpoints:    web:      exposure:        include: refresh  #git配置文件属性内容更新时，更新获取的值
+          
+      
+

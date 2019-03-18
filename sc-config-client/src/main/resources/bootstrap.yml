@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: config-client    # 对应config server所获取的配置文件的{application},git仓库的名称 config-client-dev.properties
+  cloud:
+    config:
+      label: master
+      profile: dev
+      uri: http://localhost:8770/
