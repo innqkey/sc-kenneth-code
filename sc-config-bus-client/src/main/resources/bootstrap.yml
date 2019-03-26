@@ -1,0 +1,33 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh  #git配置文件属性内容更新时，更新获取的值
+          
+spring:
+  application:
+    name: config-client    # 对应config server所获取的配置文件的{application},git仓库的名称 config-client-dev.properties
+  cloud:
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+    config:
+      label: master
+      profile: dev
+      uri: http://localhost:8770/
+      discovery:
+        enabled: true
+        service-id: config-server
+  rabbitmq:
+    host: 47.99.170.201
+    port: 5672
+    username: rabbitmq
+    password: rabbitmq
+    
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/  
+      

@@ -67,5 +67,6 @@
 		<module>sc-eureka-zuul</module>
 		<module>sc-config-server</module>
 		<module>sc-config-client</module>
+		<module>sc-config-bus-client</module>
 	</modules>
 </project>
