@@ -68,5 +68,7 @@
 		<module>sc-config-server</module>
 		<module>sc-config-client</module>
 		<module>sc-config-bus-client</module>
+		<module>sc-service-sleuth</module>
+		<module>sc-service-sleuth-kenneth</module>
 	</modules>
 </project>
