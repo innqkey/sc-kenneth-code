@@ -12,7 +12,8 @@ eureka:
     healthcheck:
       enabled: true
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+      defaultZone: http://user:password123@${eureka.instance.hostname}:8761/eureka/
+      #defaultZone: http://user:password123@${eureka.instance.hostname}:8761/eureka/ 注册到带帐号的eureka服务上方式
     registry-fetch-interval-seconds: 5  #表示eureka client间隔多久去拉取服务注册信息
       
 spring:

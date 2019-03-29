@@ -1,5 +1,5 @@
 server:
-  port: 8766
+  port: 8776
 
 eureka:
   instance:
@@ -10,7 +10,7 @@ eureka:
       
 spring:
   application:
-    name: service-hystrix
+    name: service-hystrix-turbine
     
 management:  endpoints:    web:      cors:        allowed-origins: "*"        allowed-methods: "*"      exposure:        include: "*"
         

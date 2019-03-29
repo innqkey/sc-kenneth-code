@@ -70,5 +70,6 @@
 		<module>sc-config-bus-client</module>
 		<module>sc-service-sleuth</module>
 		<module>sc-service-sleuth-kenneth</module>
+		<module>sc-hystrix-turbine</module>
 	</modules>
 </project>
