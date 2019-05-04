@@ -5,8 +5,10 @@ server:
 eureka:
   instance:
     hostname: localhost
-    instance-id: eureka-server-provided
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port} # 将Instance ID设置成IP:端口的形式
     lease-renewal-interval-in-seconds: 5             # 心跳时间，每隔几s发送心跳到eureka server
+    lease-expiration-duration-in-seconds: 10      # #10s内没有收到客户端的心跳，则开始清理失效节点
   client:
     healthcheck:
       enabled: true
@@ -17,4 +19,6 @@ eureka:
       
 spring:
   application:
-    name: eureka-client
+    name: eureka-client             # 首页application 名字
+    
+management:  endpoints:    web:      exposure:        include: service-registry    #优雅的下线微服务的方式
