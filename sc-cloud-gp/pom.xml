@@ -14,7 +14,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>sc-cloud-native</module>
-        <module>sc-config-server</module>
+        <module>sc-cloud-config-server</module>
     </modules>
 
 
