@@ -1,6 +1,6 @@
 #eureka 服务提供者
 server:
-  port: 8763
+  port: 10086
 
 eureka:
   instance:
@@ -19,7 +19,7 @@ eureka:
       
 spring:
   application:
-    name: eureka-client             # 首页application 名字
+    name: server-application             # 首页application 名字
     
 management:
   endpoints:

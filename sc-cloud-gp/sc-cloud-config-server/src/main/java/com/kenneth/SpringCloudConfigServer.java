@@ -23,6 +23,7 @@ public class SpringCloudConfigServer {
         SpringApplication.run(SpringCloudConfigServer.class,args);
     }
 
+    //可以在此处替换掉默认为git配置属性
     @Bean
     public EnvironmentRepository environmentRepository() {
         return (String application,String profile,String label) ->{

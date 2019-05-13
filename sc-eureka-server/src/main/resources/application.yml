@@ -3,13 +3,14 @@ server:
   port: 8761
 
 eureka:
-  instance:    prefer-ip-address: true
+  instance:
+    prefer-ip-address: true
     #hostname: peer1
     hostname: localhost
     #lease-expiration-duration-in-seconds: 10      # #10s内没有收到客户端的心跳，则开始清理失效节点
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
+  client:  #当需要手动调用接口返回注册到该服务下的实例时，下面两个值需要设置为true
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/                     #匿名访问首页
       #defaultZone: http://user:password123@localhost:8761/eureka/   #带账号方式登陆首页
@@ -19,8 +20,12 @@ eureka:
     #清理服务器, 即扫描失效服务的间隔时间（缺省为60*1000ms）
     eviction-interval-timer-in-ms: 4000 
       
-spring:  application:
-    name: eureka-instance#  security:#    user:#      password: password123     #配置登陆密码 password123
+spring:
+  application:
+    name: eureka-instance
+#  security:
+#    user:
+#      password: password123     #配置登陆密码 password123
 #      name: user                #配置登陆帐号 user 
 
 management: 
@@ -29,7 +34,11 @@ management:
       exposure:
        # 暴露metrics端点（敏感端点），如需暴露多个，用,分隔；如需暴露所有端点，用'*'
        include: metrics,health
-  #endpoints 打开后，health 节点便不可用了  endpoint:    health:
-    # 是否展示健康检查详情 spring boot autuator组件      show-details: always
+  #endpoints 打开后，health 节点便不可用了
+  endpoint:
+    health:
+    # 是否展示健康检查详情 spring boot autuator组件
+      show-details: always
       
-  
+
+  

@@ -3,22 +3,19 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>sc-kenneth-code</artifactId>
+        <artifactId>sc-cloud-gp</artifactId>
         <groupId>com.kenneth</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.kenneth</groupId>
-    <artifactId>sc-cloud-gp</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>sc-cloud-native</module>
-        <module>sc-cloud-config-server</module>
-        <module>sc-client-application</module>
-        <module>sc-server-application</module>
-        <module>sc-servlet-gateway</module>
-    </modules>
+    <artifactId>sc-servlet-gateway</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>
+    </dependencies>
 </project>
